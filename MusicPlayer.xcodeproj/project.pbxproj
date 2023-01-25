@@ -17,6 +17,7 @@
 		9118977E29817F2500419E84 /* Disturbed_The_Light.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9118977B29817F2500419E84 /* Disturbed_The_Light.mp3 */; };
 		9118977F29817F2500419E84 /* Disturbed_Warrior.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9118977C29817F2500419E84 /* Disturbed_Warrior.mp3 */; };
 		911897812981CA7700419E84 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911897802981CA7700419E84 /* PlayerViewController.swift */; };
+		911897832981FCC500419E84 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911897822981FCC500419E84 /* Song.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9118977B29817F2500419E84 /* Disturbed_The_Light.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Disturbed_The_Light.mp3; sourceTree = "<group>"; };
 		9118977C29817F2500419E84 /* Disturbed_Warrior.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Disturbed_Warrior.mp3; sourceTree = "<group>"; };
 		911897802981CA7700419E84 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		911897822981FCC500419E84 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +69,13 @@
 				9118977929817EE500419E84 /* Audio */,
 				9118976529817E4000419E84 /* AppDelegate.swift */,
 				9118976729817E4000419E84 /* SceneDelegate.swift */,
+				911897822981FCC500419E84 /* Song.swift */,
 				9118976929817E4000419E84 /* ViewController.swift */,
+				911897802981CA7700419E84 /* PlayerViewController.swift */,
 				9118976B29817E4000419E84 /* Main.storyboard */,
 				9118976E29817E4500419E84 /* Assets.xcassets */,
 				9118977029817E4500419E84 /* LaunchScreen.storyboard */,
 				9118977329817E4500419E84 /* Info.plist */,
-				911897802981CA7700419E84 /* PlayerViewController.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				911897812981CA7700419E84 /* PlayerViewController.swift in Sources */,
 				9118976629817E4000419E84 /* AppDelegate.swift in Sources */,
 				9118976829817E4000419E84 /* SceneDelegate.swift in Sources */,
+				911897832981FCC500419E84 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

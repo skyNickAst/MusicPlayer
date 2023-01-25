@@ -13,6 +13,9 @@ class PlayerViewController: UIViewController {
     public var position: Int = 0
     public var songs: [Song] = []
     var player: AVAudioPlayer?
+    let playPauseButton = UIButton()
+    
+    //MARK: - Image and Labels Base Settings
     
     private let albumImageView: UIImageView = {
         let imageView = UIImageView()
@@ -44,19 +47,17 @@ class PlayerViewController: UIViewController {
         return label
     }()
     
-    let playPauseButton = UIButton()
-    
     @IBOutlet var holder: UIView!
     
+    //MARK: - AVAudioPlayer
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if holder.subviews.count == 0 {
-            configure()
-        }
+        configurePlayer()
     }
     
-    func configure() {
+    func configurePlayer() {
+        // Basic Player Configuration
         let song = songs[position]
         let urlString = Bundle.main.path(forResource: song.trackName, ofType: "mp3")
         do {
@@ -72,6 +73,14 @@ class PlayerViewController: UIViewController {
         } catch {
             print("Error to configure song/player")
         }
+        
+        configureTrackInfo(about: song)
+    }
+    
+    //MARK: - UI Player Settings
+    
+    func configureTrackInfo(about song: Song) {
+        // Track Info Configuration
         albumImageView.frame = CGRect(x: 10, y: 10, width: holder.frame.size.width - 20, height: holder.frame.size.width - 20)
         songNameLabel.frame = CGRect(x: 10, y: albumImageView.frame.size.height + 20, width: holder.frame.size.width - 20, height: 50)
         albumNameLabel.frame = CGRect(x: 10, y: albumImageView.frame.size.height + 20 + 50, width: holder.frame.size.width - 20, height: 50)
@@ -87,6 +96,11 @@ class PlayerViewController: UIViewController {
         holder.addSubview(albumNameLabel)
         holder.addSubview(artistNameLabel)
         
+        configurePlayerUIControls()
+    }
+    
+    func configurePlayerUIControls() {
+        // Player Buttons Configuration
         let nextButton = UIButton()
         let backButton = UIButton()
         
@@ -113,13 +127,15 @@ class PlayerViewController: UIViewController {
         holder.addSubview(nextButton)
         holder.addSubview(backButton)
         
+        // Volume Slider Configuration
         let slider = UISlider(frame: CGRect(x: 20, y: holder.frame.size.height - 60, width: holder.frame.size.width - 40, height: 50))
         slider.value = 0.4
         slider.tintColor = .systemPink
         slider.addTarget(self, action: #selector(didSlideSlider), for: .valueChanged)
         holder.addSubview(slider)
-        
     }
+    
+    //MARK: - Player Logic Manager
     
     @objc func didTapPlayPauseButton() {
         if player?.isPlaying == true {
@@ -144,7 +160,7 @@ class PlayerViewController: UIViewController {
             for subview in holder.subviews {
                 subview.removeFromSuperview()
             }
-            configure()
+            configurePlayer()
         }
     }
     
@@ -155,7 +171,7 @@ class PlayerViewController: UIViewController {
             for subview in holder.subviews {
                 subview.removeFromSuperview()
             }
-            configure()
+            configurePlayer()
         }
     }
     
@@ -168,6 +184,10 @@ class PlayerViewController: UIViewController {
         super.viewWillDisappear(animated)
         if let player = player {
             player.stop()
+            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+            UIView.animate(withDuration: 0.2, animations: {
+                self.albumImageView.frame = CGRect(x: 30, y: 30, width: self.holder.frame.size.width - 60, height: self.holder.frame.size.width - 60)
+            })
         }
     }
 }

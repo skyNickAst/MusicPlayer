@@ -29,6 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         songs.append(Song(name: "Warrior", albumName: "Indestructible", artistName: "Disturbed", imageName: "warrior.png", trackName: "Disturbed_Warrior"))
     }
     
+    //MARK: - Table View Settings
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
@@ -60,12 +62,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-}
-
-struct Song {
-    let name: String
-    let albumName: String
-    let artistName: String
-    let imageName: String
-    let trackName: String
 }
