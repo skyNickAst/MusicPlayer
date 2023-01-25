@@ -13,6 +13,10 @@
 		9118976D29817E4000419E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9118976B29817E4000419E84 /* Main.storyboard */; };
 		9118976F29817E4500419E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9118976E29817E4500419E84 /* Assets.xcassets */; };
 		9118977229817E4500419E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9118977029817E4500419E84 /* LaunchScreen.storyboard */; };
+		9118977D29817F2500419E84 /* Disturbed_Hell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9118977A29817F2500419E84 /* Disturbed_Hell.mp3 */; };
+		9118977E29817F2500419E84 /* Disturbed_The_Light.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9118977B29817F2500419E84 /* Disturbed_The_Light.mp3 */; };
+		9118977F29817F2500419E84 /* Disturbed_Warrior.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9118977C29817F2500419E84 /* Disturbed_Warrior.mp3 */; };
+		911897812981CA7700419E84 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911897802981CA7700419E84 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9118976E29817E4500419E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9118977129817E4500419E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9118977329817E4500419E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9118977A29817F2500419E84 /* Disturbed_Hell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Disturbed_Hell.mp3; sourceTree = "<group>"; };
+		9118977B29817F2500419E84 /* Disturbed_The_Light.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Disturbed_The_Light.mp3; sourceTree = "<group>"; };
+		9118977C29817F2500419E84 /* Disturbed_Warrior.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Disturbed_Warrior.mp3; sourceTree = "<group>"; };
+		911897802981CA7700419E84 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		9118976429817E4000419E84 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				9118977929817EE500419E84 /* Audio */,
 				9118976529817E4000419E84 /* AppDelegate.swift */,
 				9118976729817E4000419E84 /* SceneDelegate.swift */,
 				9118976929817E4000419E84 /* ViewController.swift */,
@@ -63,8 +72,19 @@
 				9118976E29817E4500419E84 /* Assets.xcassets */,
 				9118977029817E4500419E84 /* LaunchScreen.storyboard */,
 				9118977329817E4500419E84 /* Info.plist */,
+				911897802981CA7700419E84 /* PlayerViewController.swift */,
 			);
 			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		9118977929817EE500419E84 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				9118977A29817F2500419E84 /* Disturbed_Hell.mp3 */,
+				9118977B29817F2500419E84 /* Disturbed_The_Light.mp3 */,
+				9118977C29817F2500419E84 /* Disturbed_Warrior.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9118977229817E4500419E84 /* LaunchScreen.storyboard in Resources */,
+				9118977E29817F2500419E84 /* Disturbed_The_Light.mp3 in Resources */,
+				9118977F29817F2500419E84 /* Disturbed_Warrior.mp3 in Resources */,
 				9118976F29817E4500419E84 /* Assets.xcassets in Resources */,
+				9118977D29817F2500419E84 /* Disturbed_Hell.mp3 in Resources */,
 				9118976D29817E4000419E84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9118976A29817E4000419E84 /* ViewController.swift in Sources */,
+				911897812981CA7700419E84 /* PlayerViewController.swift in Sources */,
 				9118976629817E4000419E84 /* AppDelegate.swift in Sources */,
 				9118976829817E4000419E84 /* SceneDelegate.swift in Sources */,
 			);
@@ -292,8 +316,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,8 +343,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

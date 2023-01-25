@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Disturbed_Warrior.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
